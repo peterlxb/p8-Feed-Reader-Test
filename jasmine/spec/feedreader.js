@@ -78,7 +78,7 @@ $(function() {
           menuIcon.click();
           expect(body.hasClass('menu-hidden')).toBe(true);
         });
-    })
+    });
 
 
     /* TODO: Write a new test suite named "Initial Entries" */
@@ -98,7 +98,7 @@ $(function() {
          expect($('.feed .entry').children().length).toBeGreaterThan(0);
        });
 
-       })
+     });
 
        /* TODO: Write a new test suite named "New Feed Selection" */
        describe('New Feed Selction',function(){
@@ -112,14 +112,14 @@ $(function() {
            loadFeed(1,function(){
              feedEntry = $('.feed').html();
              loadFeed(2,done);
-           })
-         })
+           });
+         });
 
          it('Contents change in new Feeds',function(){
            var secEntry = $('.feed').html();
            expect(feedEntry).not.toBe(secEntry);
-         })
-       })
+         });
+       });
 
 
 
